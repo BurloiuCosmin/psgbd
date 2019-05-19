@@ -1,4 +1,10 @@
-<?php include_once TEMPLATE_PARTS_PATH . 'header.php'; ?>
+<?php
+
+if ( ! defined( 'ROOT_PATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+include_once TEMPLATE_PARTS_PATH . 'header.php'; ?>
 
 
 

@@ -1,4 +1,9 @@
 <?php
+
+if ( ! defined( 'ROOT_PATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 
 <nav class="footer-container">
@@ -9,8 +14,9 @@
 				<div class="level-item">
 					<div>
 						<figure class="image is-128x128 is-centered">
-							<img class="is-rounded" src="<?php echo ROOT_PATH . 'logo.jpg';?>"/>
-							<img class="is-rounded" src="logo.jpg" alt="Logo"/>
+<!--							<img class="is-rounded" src="--><?php //echo ROOT_PATH . 'logo.jpg';?><!--"/>-->
+                            <img class="is-rounded" src="<?php echo 'logo.jpg';?>"/>
+                            <img class="is-rounded" src="https://www.logopik.com/wp-content/uploads/edd/2018/06/Online-Shopping-Logo-Vector-226x226.png" alt="Logo"/>
 						</figure>
 					</div>
 				</div>

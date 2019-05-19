@@ -1,4 +1,9 @@
-<?php require_once TEMPLATE_PARTS_PATH . 'header.php';
+<?php
+if ( ! defined( 'ROOT_PATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+require_once TEMPLATE_PARTS_PATH . 'header.php';
 //include '../model/contactsend.php';
 ?>
 
@@ -17,8 +22,6 @@
 //				}
 				?>
 
-				<!--Redirectul o sa il fac din algoritmul php catre pagina persons.php .  -->
-
 				<form action="" method="post">
 
 					<p class="has-text-black has-text-centered"><strong>Send us all your awesome thoughts!!</strong></p>
@@ -31,7 +34,7 @@
 
 							<div class="field">
 								<br>
-								<label class="label">What is the gift that you wanna send us?<ion-icon name="gift"></ion-icon> </label>
+								<label class="label">What is the greeting that you wanna send us?<ion-icon name="gift"></ion-icon> </label>
 								<div class="field">
 									<div class="control">
 										<textarea class="textarea is-primary" type="text" placeholder="What seems to be the problem? Or do you just wanna send us some cute pictures of dogs?"></textarea>
