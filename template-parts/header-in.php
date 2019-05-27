@@ -12,10 +12,10 @@
 	<div class="hero-body ">
 		<div class="container">
 			<h1 class="title">
-				SSH
+                PSGBD
 			</h1>
 			<h2 class="subtitle">
-				Santa's Secret Helper
+                Players Greatness Before Disconnect
 			</h2>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 	<div class="navbar-item navbar-end">
 		<div class="field is grouped">
 		<a class="has-text-white">
-			Welcome back, <?php echo $_COOKIE['first_name'];?>!
+			Welcome back, <?php echo $_COOKIE['first_name'] . ' !';?>
 		</a>
 		</div>
 	</div>
@@ -46,11 +46,16 @@
 		<div class="navbar-item navbar-end">
 			<div class="field is-grouped">
 
-				<a href="categories.php" class="control button is-white">Categories</a>
+				<a href="../templates/categories.php" class="control button is-white">Categories</a>
 
-				<a href="products-history.php" class="control button is-white">Products</a>
+				<a href="../templates/games.php" class="control button is-white">Games</a>
 
-			</div>
+                <a href="../templates/orders-history.php" class="control button is-white">My Orders</a>
+
+                <a href="../templates/cart.php" class="control button is-white"><ion-icon name="cart"></ion-icon></a>
+
+
+            </div>
 
 		</div>
 
