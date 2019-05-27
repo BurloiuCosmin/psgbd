@@ -1,4 +1,4 @@
 <?php
 
-echo "<script> location.href='templates/homepage.php'; </script>";
+echo "<script> location.href='templates/login.php'; </script>";
 exit;

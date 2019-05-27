@@ -16,7 +16,7 @@
 				PSGBD
 			</h1>
 			<h2 class="subtitle">
-				Players Greatness Before Death
+				Players Greatness Before Disconnect
 			</h2>
 		</div>
 	</div>

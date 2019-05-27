@@ -1,5 +1,5 @@
-<div class="columns is-warning">
-    <div class="column is-full footer-container">
+<div class="columns">
+    <div class="column footer-container">
         <nav class="level">
             <!-- Left side -->
             <div class="level-left">

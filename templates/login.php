@@ -15,7 +15,7 @@
 
 				<form action="" method="post">
 
-					<p class="has-text-black has-text-centered"><strong>Get that Santa going...</strong></p>
+					<p class="has-text-black has-text-centered"><strong>Start gaming now!</strong></p>
 					<br>
 
 					<div class="field">
