@@ -25,3 +25,7 @@
 .container-list{
     max-width: 600px;
 }
+
+#letter{
+    color: deeppink;
+}

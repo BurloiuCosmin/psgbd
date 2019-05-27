@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="notification">
 
-<!--				--><?php
-//				if(!empty($errors)){
-//					foreach ($errors as $error){
-//						echo  "<p class=\"has-text-primary has-text-centered\"><strong>$error</strong></p><br>";
-//					}
-//				}
-//				?>
+				<?php
+				if(!empty($errors)){
+					foreach ($errors as $error){
+						echo  "<p class=\"has-text-primary has-text-centered\"><strong>$error</strong></p><br>";
+					}
+				}
+				?>
 
 				<form action="" method="post">
 

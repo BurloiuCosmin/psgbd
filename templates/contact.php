@@ -1,21 +1,20 @@
-<?php
-require_once '../template-parts/header.php'; ?>
+<?php require_once '../template-parts/header.php'; ?>
 
 	<section class="section">
 		<div class="container">
 			<div class="notification">
 
 				<?php
-//				if(!empty($errors)){
-//					foreach ($errors as $error){
-//						echo  "<p class=\"has-text-primary has-text-centered\"><strong>$error</strong></p><br>";
-//					}
-//				}
+				if(!empty($errors)){
+					foreach ($errors as $error){
+						echo  "<p class=\"has-text-primary has-text-centered\"><strong>$error</strong></p><br>";
+					}
+				}
 				?>
 
 				<form action="" method="post">
 
-					<p class="has-text-black has-text-centered"><strong>Send us all your awesome thoughts!!</strong></p>
+					<p class="has-text-black has-text-centered"><strong>Send us all your awesome thoughts!</strong></p>
 					<br>
 
 					<div class="field">
@@ -25,7 +24,7 @@ require_once '../template-parts/header.php'; ?>
 
 							<div class="field">
 								<br>
-								<label class="label">What is the greeting that you wanna send us?<ion-icon name="gift"></ion-icon> </label>
+								<label class="label">What is the greeting that you wanna send us?<ion-icon name="logo-game-controller-b"></ion-icon> </label>
 								<div class="field">
 									<div class="control">
 										<textarea class="textarea is-primary" type="text" placeholder="What seems to be the problem? Or do you just wanna send us some cute pictures of dogs?"></textarea>
@@ -38,12 +37,12 @@ require_once '../template-parts/header.php'; ?>
 				<div class="level">
 					<div class="container">
 						<br>
-						<p>or, in case you've lost yourself</p>
+						<p>In case you've lost yourself: </p>
 						<br>
 						<div class="container has-text-center">
-							<a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/login.php">Login</a>
-							<a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/register.php">Register a new account</a>
-							<a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/reset.php">Forgot your password?</a>
+							<a class="button is-primary is-rounded" href="login.php">Login</a>
+							<a class="button is-primary is-rounded" href="register.php">Register a new account</a>
+							<a class="button is-primary is-rounded" href="forgot.php">Forgot your password?</a>
 						</div>
 
 					</div>

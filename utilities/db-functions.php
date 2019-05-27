@@ -21,12 +21,3 @@ function register($username, $password, $lastname, $firstname, $phone, $email, $
 	oci_bind_by_name($stid, ':p_email', $email);
 	oci_bind_by_name($stid, ':p_adresa', $adress);
 }
-
-
-
-
-/**
- * Created by PhpStorm.
- * User: cosmin
- * Date: 27
-?>
