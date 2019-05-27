@@ -1,10 +1,6 @@
 <?php require_once '../template-parts/header.php';
-//include '../model/signup.php';
+include '../model/signup.php';
 ?>
-
-<html>
-<body>
-
 
 <section class="section">
 	<div class="container">
@@ -105,8 +101,5 @@
 		</div>
 </section>
 
-
-</body>
-</html>
 
 <?php require_once '../template-parts/footer.php';  ?>
