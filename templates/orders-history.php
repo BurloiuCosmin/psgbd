@@ -45,7 +45,7 @@ require_once '../utilities/functions.php';
 			<div class="field is-grouped">
 				<div class="control">
 					<br>
-					<a href="http://psgbd.local/psgbd/templates/games.php" class="button is-danger is-rounded">Wanna get some new games?</a>
+					<a href="games.php" class="button is-danger is-rounded">Wanna get some new games?</a>
 				</div>
 			</div>
 		</div>

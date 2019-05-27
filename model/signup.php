@@ -1,6 +1,7 @@
 <?php
 
 require_once '../utilities/connection.php';
+require_once '../utilities/db-functions.php';
 
 
 // REGISTER USER
@@ -9,8 +10,11 @@ if (isset($_POST['register'])) {
 	// initializing variables
 	$first_name = $_POST['first_name'];
 	$last_name = $_POST['last_name'];
+	$username = $_POST['username'];
 	$email    = $_POST['email'];
 	$password = $_POST['password'];
+	$phone_number = $_POST['phone_number'];
+	$address = $_POST['address'];
 	$hashed_password = password_hash($password,PASSWORD_DEFAULT);
 	$errors = array();
 	$datas ='';
@@ -26,7 +30,7 @@ if (isset($_POST['register'])) {
 
 		// first check the database to make sure
 		// a user does not already exist with the same username and/or email
-		$datas = $database->select("users_db", [ "email" ]);
+		$datas = register()
 		foreach($datas as $data){
 			if ($email==$data['email']) {
 			array_push($errors, "The user already exists");

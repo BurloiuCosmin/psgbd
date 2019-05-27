@@ -32,8 +32,10 @@ if ( isset( $_POST['login'] ) ) {
 			setcookie( 'email', $data['email'], time() + 3600, '/' );
 			setcookie( 'password', $data['password'], time() + 3600, '/' );
 
-			header( 'location: http://psgbd.local/psgbd/templates/orders-history.php' );
-			die;
+//			header( 'location: http://localhost:1234/psgbd/templates/orders-history.php' );
+			header( 'location: ../templates/orders-history.php' );
+
+				die;
 		} else {
 			$errors[] = "There is no user that has the email and password you have wrote. Please try again.";
 		}

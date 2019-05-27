@@ -27,14 +27,21 @@
 
 
             <div class="columns">
-                <div class="column is-half">
+                <div class="column is-one-third">
+                    <label class="label">Username<ion-icon name="contact"></ion-icon></label>
+                    <div class="control ">
+                        <input class="input is-primary" type="text" name="username" maxlength="25" oninvalid="alert('You must fill out the username!');" required>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
                     <label class="label">First Name<ion-icon name="contact"></ion-icon></label>
                     <div class="control ">
                         <input class="input is-primary" type="text" name="first_name" maxlength="25" oninvalid="alert('You must fill out the first name!');" required>
                     </div>
                 </div>
 
-                <div class="column is-half">
+                <div class="column is-one-third">
                     <label class="label">Last Name<ion-icon name="contact"></ion-icon></label>
                     <div class="control ">
                         <input class="input is-primary" type="text" name="last_name" maxlength="25" oninvalid="alert('You must fill out the last name!');" required>
@@ -47,11 +54,30 @@
 				<div class="control ">
 					<input class="input is-primary" type="email" placeholder="Email address" name="email" maxlength="30" oninvalid="alert('You must fill out the email or write it properly!');" required>
 				</div>
-<br>
+
+                <br>
 					<div class="field">
 						<label class="label">Your password <ion-icon name="text"></ion-icon> </label>
 						<div class="control">
 							<input class="input is-primary" type="password" placeholder="Password" name="password" maxlength="25" oninvalid="alert('You must fill out the password!');" required>
+
+
+                            <div class="columns">
+                                <br>
+                            <div class="column is-one-third">
+                    <label class="label">Phone Number<ion-icon name="contact"></ion-icon></label>
+                    <div class="control ">
+                        <input class="input is-primary" type="tel" name="phone_number" maxlength="25" oninvalid="alert('You must fill out the phone number!');" required>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <label class="label">Address<ion-icon name="contact"></ion-icon></label>
+                    <div class="control ">
+                        <input class="input is-primary" type="text" name="address" maxlength="25" oninvalid="alert('You must fill out the address!');" required>
+                    </div>
+                </div>
+                            </div>
 
 							<div class="field is-grouped">
 								<div class="control">
