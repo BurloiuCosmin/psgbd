@@ -1,5 +1,4 @@
 <?php
-
 require_once '../utilities/connection.php';
 require_once '../utilities/db-functions.php';
 
@@ -23,8 +22,12 @@ if (isset($_POST['register'])) {
 	// by adding (array_push()) corresponding error unto $errors array
 	if (empty($first_name)) { array_push($errors, "First name is required"); }
 	if (empty($last_name)) { array_push($errors, "Last name is required"); }
+	if (empty($username)) { array_push($errors, "Username is required"); }
 	if (empty($email)) { array_push($errors, "Email is required"); }
 	if (empty($password)) { array_push($errors, "Password is required"); }
+	if (empty($phone_number)) { array_push($errors, "Phone number is required"); }
+	if (empty($address)) { array_push($errors, "Address is required"); }
+
 	if ( null == filter_var( $email, FILTER_VALIDATE_EMAIL ) || false == filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 							array_push($errors, "Email is not properly written"); }
 

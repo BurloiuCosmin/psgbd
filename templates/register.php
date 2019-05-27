@@ -1,12 +1,12 @@
 <?php require_once '../template-parts/header.php';
-//include '../model/signup.php';
+include '../model/signup.php';
 ?>
 
 <section class="section">
     <div class="container">
         <div class="notification">
 
-            <!--Redirectul o sa il fac din algoritmul php catre pagina persons.php, userul fiind deja logat .  -->
+            <!--Redirectul o sa il fac din algoritmul php catre pagina orders-history.php, userul fiind deja logat .  -->
 
             <p class="has-text-black has-text-centered"><strong>You are just one step away...</strong></p>
             <br>
@@ -119,9 +119,6 @@
         </div>
     </div>
 
-
-    </div>
-    </div>
 </section>
 
 
