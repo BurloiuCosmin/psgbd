@@ -1,14 +1,5 @@
 <?php
-if ( ! defined( 'ROOT_PATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-require_once TEMPLATE_PARTS_PATH . 'header.php';
-//include '../model/contactsend.php';
-?>
-
-	<html>
-	<body>
+require_once '../template-parts/header.php'; ?>
 
 	<section class="section">
 		<div class="container">
@@ -60,12 +51,7 @@ require_once TEMPLATE_PARTS_PATH . 'header.php';
 
 			</div>
 		</div>
-		</div>
-		</div>
 	</section>
 
 
-	</body>
-	</html>
-
-<?php require_once TEMPLATE_PARTS_PATH . 'footer.php'; ?>
+<?php require_once '../template-parts/footer.php'; ?>
