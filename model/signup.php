@@ -17,7 +17,7 @@ if (isset($_POST['register'])) {
 	$address = $_POST['address'];
 	$hashed_password = password_hash($password,PASSWORD_DEFAULT);
 	$errors = array();
-	$datas ='';
+	$data ='';
 
 	// form validation: ensure that the form is correctly filled ...
 	// by adding (array_push()) corresponding error unto $errors array
@@ -30,30 +30,15 @@ if (isset($_POST['register'])) {
 
 		// first check the database to make sure
 		// a user does not already exist with the same username and/or email
-		$datas = register($username, $password, $last_name, $first_name, $phone_number, $email, $adress);
-		if($datas == 0)
-			echo 'Successful registration';
-		else
-			echo 'Wrong data';
-		// foreach($datas as $data){
-		// 	if ($email==$data['email']) {
-		// 	array_push($errors, "The user already exists");
-		// 	}
-		// }
 
+	$data = register($username, $password, $last_name, $first_name, $phone_number, $email, $address);
 
-	// Finally, register user if there are no errors in the form
-	if (count($errors) == 0) {
+			if ( 0 == $data) {
+			array_push($errors, "The user already exists");
+			}
+			else {
+				header( 'location: ../view/login.php' );
+				exit;
+			}
 
-		$database->insert('users_db', [
-			'first_name' => $first_name,
-			'last_name' => $last_name,
-			'email' => $email,
-			'password' => password_hash($password,PASSWORD_DEFAULT),
-		]);
-
-
-		header('location: ../view/login.php');
-		exit;
-	}
 }
