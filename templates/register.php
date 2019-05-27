@@ -1,5 +1,5 @@
 <?php require_once '../template-parts/header.php';
-include '../model/signup.php';
+//include '../model/signup.php';
 ?>
 
 <html>
@@ -68,7 +68,7 @@ include '../model/signup.php';
 							<p>or...</p>
 							<br>
 							<div class="container has-text-center">
-                                <a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/login.php">Log into your account</a>
+                                <a class="button is-primary is-rounded" href="login.php">Log into your account</a>
 							</div>
 
 						</div>

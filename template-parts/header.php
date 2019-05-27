@@ -12,11 +12,9 @@
 
 	<div class="hero-body ">
 		<div class="header-container">
-			<h1 class="title">
-				PSGBD
-			</h1>
+			<h1 class="title">PSGBD</h1>
 			<h2 class="subtitle">
-				Players Greatness Before Disconnect
+                <span id="letter">P</span>layer<span id="letter">S</span> <span id="letter">G</span>reatness <span id="letter">B</span>efore <span id="letter">D</span>isconnect
 			</h2>
 		</div>
 	</div>

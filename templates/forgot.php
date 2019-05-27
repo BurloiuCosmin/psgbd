@@ -1,5 +1,5 @@
 <?php require_once '../template-parts/header.php';
-include '../model/tokencreator.php';
+//include '../model/tokencreator.php';
 ?>
 
 <html>

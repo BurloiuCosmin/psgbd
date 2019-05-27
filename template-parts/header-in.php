@@ -15,7 +15,7 @@
                 PSGBD
 			</h1>
 			<h2 class="subtitle">
-                Players Greatness Before Disconnect
+                <span id="letter">P</span>layer<span id="letter">S</span> <span id="letter">G</span>reatness <span id="letter">B</span>efore <span id="letter">D</span>isconnect
 			</h2>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 <!--Aici ar trebui sa iau emailul userului, sa il caut in baza de date si sa iau first name-ul -->
 	<div class="navbar-item navbar-end">
 		<div class="field is grouped">
-		<a class="has-text-white">
+		<a class="has-text-danger">
 			Welcome back, <?php echo $_COOKIE['first_name'] . ' !';?>
 		</a>
 		</div>

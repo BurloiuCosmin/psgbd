@@ -1,19 +1,19 @@
 <?php
 require_once '../utilities/connection.php';
-require_once '../utilities/randomgenerator.php';
+//require_once '../utilities/randomgenerator.php';
 
 session_start();
 
 $errors = array();
 $datas='';
-$santa_reset_email='santa@santa.com';
+$psgbd_reset_email='psgbd@psgbd.com';
 $random_token=randomize();
 
 // Create a token and send it to the user via email
 if ( isset( $_POST['send'] ) ) {
 
 	$email = $_POST['email'];
-	$msg   = 'Because you had some issues with your password, Santa will come and rescue the situation.' . "\r\n" . "\r\n" . ' Click on the following link to reset your password: ' . ' http://pixy.local/ssh/view/reset.php?token=' . $random_token . '&email=' . $email . ' .' . "\r\n" . "\r\n" . ' Have a jolly day!';
+	$msg   = 'Because you had some issues with your password, PSGBD will come and rescue the situation.' . "\r\n" . "\r\n" . ' Click on the following link to reset your password: ' . ' http://psgbd.local/psgbd/templates/reset.php?token=' . $random_token . '&email=' . $email . ' .' . "\r\n" . "\r\n" . ' Have a jolly day!';
 	$flag = 0;
 
 	if ( empty( $email ) ) {
@@ -42,12 +42,14 @@ if ( isset( $_POST['send'] ) ) {
 				],
 					[ "email"=>$data['email']]);
 
-				mail( $email, 'Santa gifted you something small, but important...', $msg, 'From: ' . $santa_reset_email );
-				header( 'location: ../view/afterforgot.php' );
+				mail( $email, 'PSGBD gifted you something small, but important...', $msg, 'From: ' . $psgbd_reset_email );
+				header( 'location: ../templates/afterforgot.php' );
 				exit();
 			}
 		}
 	}
-	else{array_push($errors, "The user doesn't exist");}
+	else{
+		array_push($errors, "The user doesn't exist");
+	}
 }
 
