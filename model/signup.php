@@ -30,12 +30,16 @@ if (isset($_POST['register'])) {
 
 		// first check the database to make sure
 		// a user does not already exist with the same username and/or email
-		$datas = register()
-		foreach($datas as $data){
-			if ($email==$data['email']) {
-			array_push($errors, "The user already exists");
-			}
-		}
+		$datas = register($username, $password, $last_name, $first_name, $phone_number, $email, $adress);
+		if($datas == 0)
+			echo 'Successful registration';
+		else
+			echo 'Wrong data';
+		// foreach($datas as $data){
+		// 	if ($email==$data['email']) {
+		// 	array_push($errors, "The user already exists");
+		// 	}
+		// }
 
 
 	// Finally, register user if there are no errors in the form
