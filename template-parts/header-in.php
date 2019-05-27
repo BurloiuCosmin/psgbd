@@ -19,6 +19,7 @@
 			</h2>
 		</div>
 	</div>
+
 <!--Aici ar trebui sa iau emailul userului, sa il caut in baza de date si sa iau first name-ul -->
 	<div class="navbar-item navbar-end">
 		<div class="field is grouped">
