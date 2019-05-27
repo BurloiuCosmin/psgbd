@@ -1,8 +1,4 @@
 <?php
-/*if ( ! defined( 'SSH_ABSPATH' ) ) {
-	die;
-}*/
-
 require_once '../template-parts/header-in.php';
 require_once '../utilities/connection.php';
 require_once '../utilities/functions.php';
@@ -35,7 +31,7 @@ require_once '../utilities/functions.php';
                     </div>
                     
                     <div class="column is-one-quarter has-text-centered">
-                    <p><strong>'. $order['number_of_games']. '</strong></p>
+                    <p><strong>'. $order['games_number']. '</strong></p>
                     </div>
                     
                     <div class="column is-one-quarter auto">
