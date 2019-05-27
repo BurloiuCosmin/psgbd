@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cosmin
- * Date: 27/05/2019
- * Time: 23:05
- */
+// Create connection to Oracle
+$conn = oci_connect("MARIUTA", "MARIUTA", "//localhost:1521");
+if (!$conn) {
+   $m = oci_error();
+   echo $m['message'], "\n";
+   exit;
+}
+else {
+   print "Connected to Oracle!";
+}
+// Close the Oracle connection
+oci_close($conn);
+?>
+ 
