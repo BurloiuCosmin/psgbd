@@ -11,7 +11,7 @@ function login($username, $password) {
 
 
 function register($username, $password, $lastname, $firstname, $phone, $email, $adress) {
-	$sql = 'BEGIN register(:p_username, :p_parola, :p_nume, :p_prenume, :p_telefon, :p_email, :p_adresa); END;';
+	$sql = 'BEGIN :result := register(:p_username, :p_parola, :p_nume, :p_prenume, :p_telefon, :p_email, :p_adresa); END;';
 	$stid = oci_parse($conn, $sql);
 	oci_bind_by_name($stid, ':p_username', $username);
 	oci_bind_by_name($stid, ':p_parola', $password);
@@ -20,4 +20,6 @@ function register($username, $password, $lastname, $firstname, $phone, $email, $
 	oci_bind_by_name($stid, ':p_telefon', $phone);
 	oci_bind_by_name($stid, ':p_email', $email);
 	oci_bind_by_name($stid, ':p_adresa', $adress);
+	oci_bind_by_name($stid, ':result', $result);
+	return $result;
 }

@@ -44,7 +44,7 @@
 						<p>or...</p>
 						<br>
 						<div class="container has-text-center">
-							<a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/register.php">Register a new account</a>
+							<a class="button is-primary is-rounded" href="register.php">Register a new account</a>
 							<a class="button is-primary is-rounded" href="http://pixy.local/ssh/view/forgot.php">Forgot your password?</a>
 						</div>
 
