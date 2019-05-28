@@ -1,6 +1,6 @@
 <?php
-require_once '../utilities/connection.php';
-require_once '../utilities/db-functions.php';
+//require_once '../utilities/connection.php';
+//require_once '../utilities/db-functions.php';
 
 
 // REGISTER USER
@@ -40,7 +40,7 @@ if (isset($_POST['register'])) {
 			array_push($errors, "The user already exists");
 			}
 			else {
-				header( 'location: ../view/login.php' );
+				header( 'location: ../templates/login.php' );
 				exit;
 			}
 

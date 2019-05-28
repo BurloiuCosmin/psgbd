@@ -1,7 +1,6 @@
 <?php require_once '../template-parts/header-in.php';
 include '../utilities/connection.php';
 include '../model/showgames.php';
-include '../model/information_to_edit.php';
 ?>
 
 <html>
@@ -37,13 +36,6 @@ include '../model/information_to_edit.php';
 			}
 			?>
 
-
-				<div class="field is-grouped">
-					<div class="control">
-						<br>
-						<a href="http://pixy.local/ssh/view/add.php" class="button is-danger is-rounded">Add a new one</a>
-					</div>
-				</div>
         </div>
     </div>
 </section>
