@@ -59,7 +59,7 @@ include '../model/signup.php';
                     <ion-icon name="mail"></ion-icon>
                 </label>
                 <div class="control ">
-                    <input class="input is-primary" type="email" placeholder="Email address" name="email" maxlength="30"
+                    <input class="input is-primary" type="email" placeholder="Email address" name="email" maxlength="50"
                            oninvalid="alert('You must fill out the email or write it properly!');" required>
                 </div>
 

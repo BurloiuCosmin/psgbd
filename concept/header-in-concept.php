@@ -24,7 +24,7 @@
 	<div class="navbar-item navbar-end">
 		<div class="field is grouped">
 		<a class="has-text-danger">
-			Welcome back, <?php echo $_COOKIE['username'] . ' !';?>
+			Welcome back, SyFu !
 		</a>
 		</div>
 	</div>

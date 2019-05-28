@@ -29,7 +29,12 @@ if (isset($_POST['register'])) {
 	if (empty($address)) { array_push($errors, "Address is required"); }
 
 	if ( null == filter_var( $email, FILTER_VALIDATE_EMAIL ) || false == filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
-							array_push($errors, "Email is not properly written"); }
+							array_push($errors, "Email is not properly written");
+	}
+
+	if (! is_numeric($phone_number)){
+		array_push($errors, "Phone number is not properly written");
+	}
 
 		// first check the database to make sure
 		// a user does not already exist with the same username and/or email

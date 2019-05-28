@@ -32,8 +32,8 @@ if ( isset( $_POST['login'] ) ) {
 
 //			header( 'location: http://localhost:1234/psgbd/templates/orders-history.php' );
 			header( 'location: ../templates/orders-history.php' );
+			die;
 
-				die;
 		} else {
 			$errors[] = "There is no user that has the username and password you have wrote. Please try again.";
 		}

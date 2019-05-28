@@ -15,9 +15,8 @@
             </div>
 
             <!-- Center -->
-            <div class="content is-centered has-text-centered">
-                <p class="has-text-white">Made by Mary and Cosmin
-                </p>
+            <div class="content has-text-centered">
+                <p class="has-text-white">Made by Mary and Cosmin.</p>
             </div>
 
             <!-- Right side -->

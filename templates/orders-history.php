@@ -1,7 +1,6 @@
 <?php
 require_once '../template-parts/header-in.php';
-require_once '../utilities/connection.php';
-require_once '../utilities/functions.php';
+require_once '../model/show-order-history.php';
 
 ?>
 

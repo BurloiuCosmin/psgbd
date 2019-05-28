@@ -1,5 +1,5 @@
 <?php require_once '../template-parts/header.php';
-require_once '../model/signin.php';
+//require_once '../model/signin.php';
 ?>
 
 
@@ -21,8 +21,8 @@ require_once '../model/signin.php';
                     <br>
 
                     <div class="field">
-                        <label class="label">Your email
-                            <ion-icon name="mail"></ion-icon>
+                        <label class="label">Your username
+                            <ion-icon name="power"></ion-icon>
                         </label>
                         <div class="control ">
                             <input class="input is-primary" type="text" placeholder="Username" name="username"

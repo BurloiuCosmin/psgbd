@@ -1,12 +1,12 @@
-<?php require_once '../template-parts/header-in.php';
+<?php require_once 'header-in-concept.php';
 ?>
 
 <section class="section">
-    <div class="container-categories-list">
-        <div class="notification is-centered">
+	<div class="container-categories-list">
+		<div class="notification">
 
-            <p class="has-text-black has-text-centered"><strong>List of available game categories. Choose your poison</strong></p>
-            <br>
+			<p class="has-text-black has-text-centered"><strong>List of available game categories. Choose your poison</strong></p>
+			<br>
             <div class="columns">
                 <div class="column is-one-third">
                     <figure class="image is-5by3">
@@ -94,9 +94,9 @@
                 </div>
             </div>
 
-        </div>
-    </div>
+		</div>
+	</div>
 </section>
 
 
-<?php require_once '../template-parts/footer.php';  ?>
+<?php require_once 'footer-concept.php';  ?>
