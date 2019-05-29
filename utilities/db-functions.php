@@ -9,6 +9,10 @@ function login($username, $password) {
 	oci_bind_by_name($stid, ':p_parola', $password);
 	oci_execute($stid);
 	return $result;
+	if($result == 1)
+		echo 'heeeeeeeeeeeeeeeeei';
+	else
+		echo 'nuuuuuuuuuuuuuuuuuu';
 }
 
 function register($username, $password, $lastname, $firstname, $phone, $email, $adress) {
@@ -45,4 +49,5 @@ function register($username, $password, $lastname, $firstname, $phone, $email, $
 		oci_bind_by_name($stid4, ':p_adresa', $adress);
 		oci_execute($stid4);
 	}
+	return $result;
 }
