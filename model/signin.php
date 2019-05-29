@@ -9,7 +9,6 @@ if ( isset( $_POST['login'] ) ) {
 	$username    = $_POST['username'];
 	$password = $_POST['password'];
 	$errors   = array();
-	$data     = array();
 
 	if ( empty( $username ) ) {
 		$errors[] = "Username is required at login";
@@ -22,12 +21,8 @@ if ( isset( $_POST['login'] ) ) {
 
 		$data = login($username, $password);
 
-		if ( 1 === $data ) {
-//			if ( true == password_verify($password,$data[0]['password']) ) {
-//			$data = $data[0];
+		if ( 1 == $data ) {
 			setcookie( 'username', $username, time() + 3600, '/' );
-//			setcookie( 'user_id', $data['user_id'], time() + 3600, '/' );
-//			setcookie( 'email', $data['email'], time() + 3600, '/' );
 			setcookie( 'password', $password, time() + 3600, '/' );
 
 //			header( 'location: http://localhost:1234/psgbd/templates/orders-history.php' );

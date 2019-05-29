@@ -25,9 +25,6 @@
             <div class="level">
                 <div class="level-right">
                     <p class="control">
-                        <a href="<?php echo '../templates/contact.php' ?>" class="button">
-                            <strong>Message Us</strong>
-                        </a>
                         <a href="<?php echo '../templates/aboutus.php' ?>" class="button">
                             <strong>About us</strong>
                         </a>
