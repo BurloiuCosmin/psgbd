@@ -100,8 +100,7 @@ include '../model/signup.php';
                 <div class="field is-grouped">
                     <div class="control">
                         <br>
-                        <button type="submit" name="register" class="button is-rounded is-danger">Register
-                        </button>
+                        <button type="submit" name="register" class="button is-rounded is-danger">Register</button>
                     </div>
                 </div>
         </div>

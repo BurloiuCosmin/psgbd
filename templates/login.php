@@ -1,5 +1,5 @@
 <?php require_once '../template-parts/header.php';
-//require_once '../model/signin.php';
+include '../model/signin.php';
 ?>
 
 
@@ -56,7 +56,6 @@
                         <br>
                         <div class="container has-text-center">
                             <a class="button is-primary is-rounded" href="register.php">Register a new account</a>
-                            <a class="button is-primary is-rounded" href="forgot.php">Forgot your password?</a>
                         </div>
 
                     </div>
