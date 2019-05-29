@@ -25,8 +25,7 @@ if ( isset( $_POST['login'] ) ) {
 			setcookie( 'username', $username, time() + 3600, '/' );
 			setcookie( 'password', $password, time() + 3600, '/' );
 
-//			header( 'location: http://localhost:1234/psgbd/templates/orders-history.php' );
-			header( 'location: ../templates/orders-history.php' );
+			header( 'location: ../templates/categories.php' );
 			die;
 
 		} else {
