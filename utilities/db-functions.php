@@ -4,15 +4,11 @@ function login($username, $password) {
 	$conn = oci_connect('MARIUTA', 'MARIUTA', "//localhost:1521");
 	$sql = 'BEGIN :result := login(:p_username, :p_parola); END;';
 	$stid = oci_parse($conn, $sql);
-	oci_bind_by_name($stid, ':result', $result);
 	oci_bind_by_name($stid, ':p_username', $username);
 	oci_bind_by_name($stid, ':p_parola', $password);
+	oci_bind_by_name($stid, ':result', $result);
 	oci_execute($stid);
 	return $result;
-	if($result == 1)
-		echo 'heeeeeeeeeeeeeeeeei';
-	else
-		echo 'nuuuuuuuuuuuuuuuuuu';
 }
 
 function register($username, $password, $lastname, $firstname, $phone, $email, $adress) {
