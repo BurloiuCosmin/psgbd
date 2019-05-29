@@ -11,10 +11,6 @@ include '../utilities/connection.php';
 
             <?php include '../model/show-one-category.php'; ?>
 
-
-            
-
-
         </div>
     </div>
 </section>
