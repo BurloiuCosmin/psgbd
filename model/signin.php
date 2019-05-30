@@ -25,6 +25,23 @@ if ( isset( $_POST['login'] ) ) {
 			setcookie( 'username', $username, time() + 3600, '/' );
 			setcookie( 'password', $password, time() + 3600, '/' );
 
+			$conn = oci_connect('MARIUTA', 'MARIUTA', "//localhost:1521");
+			$sql = 'SELECT id from clienti where username = :username and parola = :parola';
+			$stid = oci_parse($conn, $sql);
+			oci_bind_by_name($stid, ':username', $username);
+			oci_bind_by_name($stid, ':parola', $password);
+			if (!$stid) {
+				$e = oci_error($conn);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+			$r = oci_execute($stid);
+			if (!$r) {
+				$e = oci_error($stid);
+				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+			}
+			$row = oci_fetch_array($stid, OCI_ASSOC);
+			$id = $row['ID'];
+			setcookie( 'id', $id, time() + 3600, '/' );
 			header( 'location: ../templates/categories.php' );
 			die;
 
