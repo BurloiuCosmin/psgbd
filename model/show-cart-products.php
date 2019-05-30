@@ -38,12 +38,12 @@ while($row2 = oci_fetch_array($stid2, OCI_ASSOC)) {
     
     foreach ($row2 as $item2) {
         print "    <td>" . ($item2 !== null ? htmlentities($item2, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-        //echo '<div class="container has-text-center"><a class="button is-primary is-rounded is-small" href="../model/add-to-cart.php?id=' . $row['ID'] .'">Buy it</a></div>';
 }
+	echo '<div class="container has-text-center"><a class="button is-primary is-rounded is-small" href="../model/delete-from-cart.php?id=' . $row['ID'] .'">Remove it</a></div>';
+
 }
 print "</table>\n";
 
-?>
 
 
 
