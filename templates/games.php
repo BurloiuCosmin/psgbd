@@ -1,6 +1,5 @@
 <?php require_once '../template-parts/header-in.php';
 include '../utilities/connection.php';
-include '../model/show-games.php';
 ?>
 
 <section class="section">
@@ -11,26 +10,7 @@ include '../model/show-games.php';
 			<br>
 
 			<?php
-            foreach( $all_games as $game ){
-
-				echo '
-                <div class="columns">
-                    <div class="column is-one-third">
-                        <p><strong>
-                        ' . '.' . $game['name'] . ' ' . $game['cover'] . '</strong></p>
-                    </div>
-                    
-                    <div class="column is-one-third">
-                        <p><strong>
-                        ' . '.' . $game['category'] . ' ' . $game['availability'] .'</strong></p>
-                    </div>
-                    
-                    <div class="column is-one-third">
-                        <p><strong>'. $game['price']. '</strong></p>
-                    </div>
-				
-				</div>';
-			}
+			include '../model/show-games.php';
 			?>
 
         </div>
