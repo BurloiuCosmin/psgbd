@@ -13,10 +13,12 @@
 
 			?>
 
+            <form action="../model/checkout.php" method="POST">
+
             <div class="field is-grouped">
                 <div class="control center">
                     <br>
-                    <button type="submit" name="buy_more" class="button is-medium is-rounded is-danger">
+                    <button type="submit" name="checkout" class="button is-medium is-rounded is-danger">
                         Checkout?
                     </button>
                 </div>
