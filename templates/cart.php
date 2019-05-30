@@ -1,5 +1,4 @@
 <?php require_once '../template-parts/header-in.php';
-include '../model/show-cart-products.php';
 ?>
 
 <section class="section">
@@ -10,28 +9,8 @@ include '../model/show-cart-products.php';
 			<br>
 
 			<?php
-			foreach( $cart_games as $game ){
+			include '../model/show-cart-products.php';
 
-				echo '
-                <div class="columns">
-                    <div class="column is-one-third">
-                        <figure class="image is-128x128">
-                        <img src=' . $game['cover'] .'>
-                    </figure>
-                    </div>
-                    
-                    <div class="column is-one-third">
-                        <p><strong>
-                        '. 'Category:' . $game['category'] . ' ' . 'Quantity: ' . $game['quantity'] .
-                     '</strong></p>
-                    </div>
-                    
-                    <div class="column is-one-third">
-                        <p><strong>'. $game['price']. '$' . '</strong></p>
-                    </div>
-				
-				</div>';
-			}
 			?>
 
             <div class="field is-grouped">
