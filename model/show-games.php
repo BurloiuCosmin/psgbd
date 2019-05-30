@@ -20,7 +20,7 @@ while ( $row = oci_fetch_array( $stid, OCI_ASSOC + OCI_RETURN_NULLS ) && $i <11 
 	print "<tr>\n";
 	foreach ( $row as $item ) {
 		print "    <td>" . ( $item !== null ? htmlentities( $item, ENT_QUOTES ) : "&nbsp;" ) . "</td>\n";
-		echo '<div class="container has-text-center"><a class="button is-primary is-rounded is-small" href="../model/add-to-cart.php">Buy Game</a></div>';
+		echo '<div class="container has-text-center"><a class="button is-primary is-rounded is-small" href="../model/add-to-cart.php?id=' . $item['id'] .'">Buy it</a></div>';
 	}
 	print "</tr>\n";
 	$i++;
