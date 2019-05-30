@@ -40,8 +40,8 @@ if ( isset( $_POST['login'] ) ) {
 				trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 			}
 			$row = oci_fetch_array($stid, OCI_ASSOC);
-			$id = $row['ID'];
-			setcookie( 'id', $id, time() + 3600, '/' );
+			$id_client = $row['ID'];
+			setcookie( 'id', $id_client, time() + 3600, '/' );
 			header( 'location: ../templates/categories.php' );
 			die;
 
