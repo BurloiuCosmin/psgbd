@@ -8,10 +8,13 @@
 			<p class="has-text-black has-text-centered"><strong>List of statistics regarding our site</strong></p>
 			<br>
 			<div class="columns">
-				<div class="column is-one-third">
-
+				<div class="column is-half">
+                    <?php require_once '../model/jocuri_2015.php'; ?>
 				</div>
 
+                <div class="column is-one-third">
+	                <?php require_once '../model/nr_comenzi_zi.php'; ?>
+                </div>
 
 			</div>
 
