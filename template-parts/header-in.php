@@ -46,8 +46,11 @@
 
 		<div class="navbar-item navbar-end">
 			<div class="field is-grouped">
+                <a href="../templates/recommend.php" class="control button is-white">Recommend</a>
 
-				<a href="../templates/categories.php" class="control button is-white">Categories</a>
+                <a href="../templates/statistics.php" class="control button is-white">Statistics</a>
+
+                <a href="../templates/categories.php" class="control button is-white">Categories</a>
 
 				<a href="../templates/games.php" class="control button is-white">Games</a>
 
