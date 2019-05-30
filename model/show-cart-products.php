@@ -45,6 +45,23 @@ while($row2 = oci_fetch_array($stid2, OCI_ASSOC)) {
 print "</table>\n";
 
 
+$sql7 = 'begin vanzariFidelitate(:p_id_client); end;';
+$stid7= oci_parse($conn, $sql7);
+oci_bind_by_name($stid7, ':p_id_client', $id_client);
+oci_execute($stid7);
+
+$sql8 = 'select fidelitate from statistici where id_client = :idd_client';
+$stid8 = oci_parse($conn, $sql8);
+oci_bind_by_name($stid8, ':idd_client', $id_client);
+$r8 = oci_execute($stid8);
+$row8 = oci_fetch_array($stid8, OCI_ASSOC);
+$fidelitate = $row8['FIDELITATE'];
+echo "Punctele mele de fideliat sunt: " . $fidelitate;
+
+
+
+
+
 
 
 
