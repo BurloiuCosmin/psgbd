@@ -120,14 +120,14 @@ TYPE varr IS VARRAY(1000) OF varchar(100);
   v_stoc NUMBER(6);
   v_versiune NUMBER(2);
   v_an_lansare NUMBER(4);
-  lista_tematica_jocuri varr := varr('actiune', 'aventura', 'lupte', 'puzzle', 'curse', 'RPG', 'sport', 'strategie', 'shooter FPS', 'shooter TPS');
+  lista_tematica_jocuri varr := varr('action', 'adventure', 'fighting', 'puzzle', 'racing', 'RPG', 'sports', 'RTS', 'FPS', 'TPS');
   lista_producator_jocuri varr := varr('07th Expansion', '11 bit studios', '1C Company', '2K Games', 'Quantic Dreams', '3D Realms', '505 Games', '7th Level', 'Accolade');
   v_tematica_jocuri VARCHAR(50);
   v_producator VARCHAR(50);
   v_disponibilitate NUMBER(1,0) DEFAULT 1;
   v_nota NUMBER(1);
 BEGIN
-  FOR v_iterator IN 1..1000000 LOOP
+  FOR v_iterator IN 1..100 LOOP
     v_nume := lista_nume_jocuri(TRUNC(DBMS_RANDOM.VALUE(0, lista_nume_jocuri.count))+1);
     v_pret := TRUNC(DBMS_RANDOM.VALUE(50, 500))+1;
     v_stoc := TRUNC(DBMS_RANDOM.VALUE(0, 500000))+1;
@@ -141,6 +141,8 @@ BEGIN
   END LOOP;
 END;
 /
+
+commit;
 
   -- tabela clienti
 DECLARE
@@ -176,6 +178,9 @@ BEGIN
   END LOOP;
 END;
 /
+
+
+select * from jocuri;
 
  -- tabela angajati
 DECLARE
@@ -247,11 +252,9 @@ END;
     ON comenzi_detalii (id_comanda)
     COMPUTE STATISTICS;
 /  
-
 -- FUNCTII DE BAZA
-begin
-insert into clienti values(1, 'mariahlusneac', 'mariahlusneac', 'Hlusneac', 'Maria', '0755795912', 'mariahlusneac@yahoo.com', 0, 'Oituz');
-end;
+
+
 CREATE OR REPLACE FUNCTION register(p_username VARCHAR2, p_parola VARCHAR2, p_nume VARCHAR2, p_prenume VARCHAR2, p_telefon VARCHAR2, p_email VARCHAR2, p_adresa_livrare VARCHAR2)
 RETURN INTEGER AS
   ultimul_id INTEGER;
@@ -259,27 +262,51 @@ RETURN INTEGER AS
   counter INTEGER;
 BEGIN
   SELECT COUNT(*) into counter FROM clienti WHERE username = p_username and parola = p_parola and email = p_email;
-  if(counter = 0) THEN
-    SELECT id into ultimul_id from clienti where rownum = 1 order by id desc;
-    id_client_nou := ultimul_id + 1;
-    --INSERT INTO CLIENTI VALUES(id_client_nou, p_username, p_parola, p_nume, p_prenume, p_telefon, p_email, 0, p_adresa_livrare);
-  end if;
   if(counter = 0) then
-  RETURN 1;
+    RETURN 1;
   else
-  return 0;
+    return 0;
   end if;
 END;
 /
-declare
-  x INTEGER;
+
+
+
+CREATE OR REPLACE PROCEDURE inserare(id_inserare IN INTEGER, p_username IN VARCHAR2, p_parola IN VARCHAR2, p_nume IN VARCHAR2, p_prenume IN VARCHAR2, p_telefon IN VARCHAR2, p_email IN VARCHAR2, p_adresa_livrare IN VARCHAR2) AS
+BEGIN
+  INSERT INTO clienti values(id_inserare, p_username, p_parola, p_nume, p_prenume, p_telefon, p_email, 0, p_adresa_livrare);
+END inserare;
+/
+
 begin
-  x := register('mariahlusn3eac', 'mariahlusneac', 'Hlusneac', 'Mariuta', '0755555555', 'mariahlusneac@yahoo.com', 'Oituz');
+inserare(6, 'bumbuana', 'bumbuana', 'Bumbu', 'Ana', '0722222222', 'bumbuana@yahoo.com', 'Codrescu');
+end;
+/
+
+
+
+CREATE OR REPLACE FUNCTION idInserare
+RETURN INTEGER AS
+  ultimul_id INTEGER;
+BEGIN
+  SELECT id into ultimul_id from clienti where rownum = 1 order by id desc;
+  RETURN ultimul_id + 1;
+END;
+/
+
+
+declare
+x INTEGER;
+BEGIN
+  x := idInserare;
   dbms_output.put_line(x);
 end;
 
 
-select register('mariahlu654sneac', 'mariahlusneac', 'Hlusneac', 'Maria', '0755795912', 'mariahlusneac@yahoo.com', 'Oituz') from dual;
+
+
+
+
 
 CREATE OR REPLACE FUNCTION login(p_username VARCHAR2, p_parola VARCHAR2)
 RETURN INTEGER AS
@@ -291,6 +318,8 @@ BEGIN
 END;
 /
 
+
+insert into clienti values(5, 'burloiucosmin', 'burloiucosmin', 'Burloiu', 'Cosmin', '0799999999', 'burloiucosmin@yahoo.com', 0, 'adresaaa');
 
 --begin
 --  register('clientnou', 'clientnou', 'clientnou', 'clientnou', '0755795912', 'clientnou@gmail.com', 'Strada Restantei'); 
@@ -599,6 +628,26 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Stoc momentan indisponibil');
 END;
 /
+
+
+CREATE OR REPLACE FUNCTION salesPerDay(zi DATE)
+RETURN INTEGER AS
+  nr_comenzi_zi INTEGER;
+BEGIN
+  SELECT COUNT(*) into nr_comenzi_zi FROM comenzi where data_plasare = zi;
+  RETURN nr_comenzi_zi;
+END;
+/
+
+declare
+v_vanzari INTEGER;
+begin
+v_vanzari := salesPerDay('03-05-2019');
+dbms_output.put_line(v_vanzari);
+end;
+
+
+
 --update jocuri set stoc = 0 where id = 956108;
 --/
 --begin
