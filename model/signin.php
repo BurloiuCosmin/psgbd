@@ -17,6 +17,11 @@ if ( isset( $_POST['login'] ) ) {
 		$errors[] = "Password is required at login";
 	}
 
+	if( strpos($username, ' ') != false ){
+		//mai trebuie un check pt parola hashed
+		$errors[] = "Information was not written properly, please try again";
+	}
+
 	if ( count( $errors ) == 0 ) {
 
 		$data = login($username, $password);
@@ -42,6 +47,7 @@ if ( isset( $_POST['login'] ) ) {
 			$row = oci_fetch_array($stid, OCI_ASSOC);
 			$id_client = $row['ID'];
 			setcookie( 'id', $id_client, time() + 3600, '/' );
+
 			header( 'location: ../templates/categories.php' );
 			die;
 
