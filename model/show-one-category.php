@@ -22,8 +22,22 @@ foreach ($categories as $category) {
 			$e = oci_error($stid);
 			trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 		}
+		
 		print "<table border='1'>\n";
 		while ($row = oci_fetch_array($stid, OCI_ASSOC)) {
+			if($row['STOC'] <= 20 and $row ['AN_LANSARE']<2017){
+				$pret_nou = $row['PRET'] * 0.7;
+				echo '<br>';
+				echo 'Pret dupa reducere:' . '<br>';
+				echo $pret_nou . '<br>';
+				echo 'Pret vechi:' . '<br>';
+				echo $row['PRET'];
+				
+			}
+			else{
+				echo 'Pret actual:' . '<br>';
+				echo $row['PRET'];
+			}
 			print "<tr>\n";
 			foreach ($row as $item) {
 				print "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";

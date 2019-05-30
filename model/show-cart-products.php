@@ -56,7 +56,11 @@ oci_bind_by_name($stid8, ':idd_client', $id_client);
 $r8 = oci_execute($stid8);
 $row8 = oci_fetch_array($stid8, OCI_ASSOC);
 $fidelitate = $row8['FIDELITATE'];
-echo "Punctele mele de fideliat sunt: " . $fidelitate;
+if( $fidelitate == 2){
+echo "Punctele mele de fidelitate sunt: " . $fidelitate . " si am reducere 30%";
+}
+else 
+echo "Punctele mele de fidelitate sunt: " . $fidelitate;
 
 
 
